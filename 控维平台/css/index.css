@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Avenir,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+.login_box{
+    position: relative;
+    width: 400px;
+    height: 350px;
+    background-color: #ffffff;
+    margin-left: 900px;
+    margin-top: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.login_header{
+    padding: 10px;
+    border-bottom: 1px solid #ebeef5;
+    text-align: center;
+
+}
+.login_content{
+    margin-top: 5px;
+    width: 398px;
+    height: 300px;
+    /*border: 1px solid red;*/
+    float: left;
+}
+.login_content  input[type="text"]{
+    outline: none;
+    width: 300px;
+    height: 40px;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #606266;
+    margin-left: 45px;
+    padding-left: 10px;
+    border: 1px solid #dcdfe6;
+    border-radius: 20px;
+
+}
+.login_content  input[type="password"]{
+    outline: none;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #606266;
+    margin-left: 45px;
+    padding-left: 10px;
+    border: 1px solid #dcdfe6;
+    border-radius: 20px;
+}
+.login_content button{
+    width: 300px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 1px solid #dcdfe6
+}
+.login_content button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css">
+    <title>控维自动化平台</title>
+</head>
+<body>
+    <div class="main_header">
+        <a href="main.html"><img src="../images/logo.png" height="65px" width="80px" style="object-fit: scale-down;"></a>
+        <ul class="main_ul">
+            <li><a href="#">应用部署</a></li>
+            <li><a href="#">待定</a></li>
+            <li><a href="#">待定</a></li>
+            <li><a href="#">待定</a></li>
+            <li style="margin-right: 564px;"><a href="#">待定</a></li>
+            <li><a href="#">待定</a></li>
+            <li><a href="#">待定</a></li>
+            
+        </ul>
+    <div>
+    <div class="main_content">
+        <div>
+            <section class="main_content_1_left">
+                <ul>
+                    <li>Kubernetes</li>
+                    <li>MySQL</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                </ul>
+            </section>
+        </div>
+        <div class="div_dis">
+            <section class="main_content_1_left">
+                <ul>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                </ul>
+            </section>
+        </div>
+        <div class="div_dis">
+            <section class="main_content_1_left">
+                <ul>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                </ul>
+            </section>
+        </div>
+        <div class="div_dis">
+            <section class="main_content_1_left">
+                <ul>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                </ul>
+            </section>
+        </div>
+        <div class="div_dis" >
+            <section class="main_content_1_left">
+                <ul>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                    <li>待定</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="content">
+        内容待定
+    </div>
+
+    <script>
+        function animation(who,target){
+            who.timer = setInterval(() => {
+                if (who.offsetLeft > target){
+                    clearInterval(who.timer)
+                }
+                who.style.left = who.offsetLeft + 5 + 'px'
+            }, 30);
+        }
+        var header = document.querySelector(".main_ul");
+        var header_a = header.querySelectorAll("li");
+        console.log(header_a)
+        var main_con = document.querySelector(".main_content");
+        var main_div = main_con.querySelectorAll("div");
+        for (var i=0;i<header_a.length;i++){
+            header_a[i].setAttribute("index",i)
+        }
+        for (var i=0;i<header_a.length; i++){
+            header_a[i].addEventListener("click",function () {
+                for(var i=0; i<header_a.length;i++){
+                    header_a[i].className = "";
+                    header_a[i].style.borderBottom = "";
+                }
+                this.className = "currsor";
+                this.style.borderBottom = "1px solid #8ac2e9";
+                var index = this.getAttribute("index");
+                
+                for(var i=0;i<main_div.length; i++){
+                    main_div[i].className = "div_dis"
+                }
+                main_div[index].className = "";
+            })
+        }
+    </script>
+
+</body>
+</html>
